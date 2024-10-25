@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Livestock Trading and Management</title>
+    <style>
+        /* CSS styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .selling-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="form-title">Horse selling form</h2>
+    <form action="hsell.php" method="post" enctype="multipart/form-data" class="selling-form">
+        <label for="name" class="form-label">Name:</label><br>
+        <input type="text" id="name" name="name" required class="form-input"><br><br>
+
+        <label for="phone" class="form-label">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required class="form-input"><br><br>
+
+        <label for="address" class="form-label">Address:</label><br>
+        <input type="text" id="address" name="address" required class="form-input"><br><br>
+
+        <label for="location" class="form-label">Location:</label><br>
+        <input type="text" id="location" name="location" required class="form-input"><br><br>
+
+        <label for="breed" class="form-label">Breed:</label><br>
+        <input type="text" id="breed" name="breed" required class="form-input"><br><br>
+
+        <label for="age" class="form-label">Age:</label><br>
+        <input type="number" id="age" name="age" required class="form-input"><br><br>
+
+        <label for="amount" class="form-label">Amount:</label><br>
+        <input type="number" id="amount" name="amount" step="0.01" required class="form-input"><br><br>
+
+        <label for="description" class="form-label">Description:</label><br>
+        <textarea id="description" name="description" required class="form-textarea"></textarea><br><br>
+
+        <label for="image" class="form-label">Upload Image:</label><br>
+        <input type="file" id="image" name="image" accept="image/*" required class="form-input"><br><br>
+
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
+</body>
+</html>
